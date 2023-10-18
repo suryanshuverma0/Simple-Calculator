@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="simpleCalculatr">
+        <div class="heading">
+          <h1>Simple Calculator</h1>
+        </div>
+
+        <div class="result">
+          <input type="text" id="result" placeholder="0" />
+        </div>
+        <div class="row">
+          <button id="clear" onclick="clearInput()">AC</button>
+          <button id="backspace" onclick="backspaceResult()">C</button>
+          <button id="open-bracket" onclick="funcNumber('(')">(</button>
+          <button id="close-bracket" onclick="funcNumber(')')">)</button>
+        </div>
+
+        <div class="row">
+          <button id="sin" onclick="trigonometricEvaluation(event)">sin</button>
+          <button id="cos" onclick="trigonometricEvaluation(event)">cos</button>
+          <button id="tan" onclick="trigonometricEvaluation(event)">tan</button>
+          <button id="percent" onclick="findPercentage()">%</button>
+        </div>
+
+        <div class="row">
+          <button id="power-square" onclick="power(event)">
+            x<sup>2</sup>
+          </button>
+          <button id="power-inverse" onclick="power(event)">
+            x<sup>-1</sup>
+          </button>
+          <button id="log" onclick="findLog()">ln</button>
+          <button id="division" onclick="funcNumber('/')">/</button>
+        </div>
+
+        <div class="row">
+          <button id="seven" onclick="funcNumber(7)">7</button>
+          <button id="eight" onclick="funcNumber(8)">8</button>
+          <button id="nine" onclick="funcNumber(9)">9</button>
+          <button id="multiply" onclick="funcNumber('*') ">*</button>
+        </div>
+
+        <div class="row">
+          <button id="four" onclick="funcNumber(4)">4</button>
+          <button id="five" onclick="funcNumber(5)">5</button>
+          <button id="six" onclick="funcNumber(6)">6</button>
+          <button id="substract" onclick="funcNumber('-')">-</button>
+        </div>
+        <div class="row">
+          <button id="one" onclick="funcNumber(1)">1</button>
+          <button id="two" onclick="funcNumber(2)">2</button>
+          <button id="three" onclick="funcNumber(3)">3</button>
+          <button id="addition" onclick="funcNumber('+')">+</button>
+        </div>
+
+        <div class="row">
+          <button id="zero" onclick="funcNumber(0)">0</button>
+          <button id="decimal" onclick="funcNumber('.')">.</button>
+          <button id="sqrt" onclick="findSqrt()">sqrt</button>
+          <button id="equals" onclick="finalResult()">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
