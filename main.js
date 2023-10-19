@@ -67,19 +67,23 @@ function trigonometricEvaluation(event) {
 }
 
 function power(event) {
-  const finalExpression = parseFloat(document.getElementById("result").value);
+  const resultField = document.getElementById("result");
+  const currentValue = resultField.value;
   const targetButtonId = event.target.id;
-  if (targetButtonId == "power-square") {
+
+  if (targetButtonId === "power-square") {
     try {
-      document.getElementById("result").value = Math.pow(finalExpression, 2);
+      const result = eval(`Math.pow(${currentValue}, 2)`);
+      resultField.value = result;
     } catch {
-      document.getElementById("result").value = "0";
+      resultField.value = "Error";
     }
-  } else if (targetButtonId == "power-inverse") {
+  } else if (targetButtonId === "power-inverse") {
     try {
-      document.getElementById("result").value = Math.pow(finalExpression, -1);
+      const result = eval(`Math.pow(${currentValue}, -1)`);
+      resultField.value = result;
     } catch {
-      document.getElementById("result").value = "0";
+      resultField.value = "Error";
     }
   }
 }
